@@ -18,7 +18,6 @@ typedef struct inthash_t {
 }
 IHash;
 
-
 void __ih_add_tail(IHash* hash, int key, int idx)
 {
 //	if (!hash) return;
@@ -68,17 +67,24 @@ void __ih_free(IHash* hash)
 	}
 }
 
+IHash *intHashInit(IHash* hash) {
+	hash->head = NULL;
+	hash->add = __ih_add_head;
+	hash->find = __ih_find;
+	hash->free = __ih_free;
+
+	return hash;
+}
+
+
+
 int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 {
 	int c, i, d, sgn = 1;
 	int* r = NULL; // return
 
-	IHash hash;
-	// Hash initialization
-	hash.head = NULL;
-	hash.add = __ih_add_head;
-	hash.find = __ih_find;
-	hash.free = __ih_free;
+	IHash hash; 
+	intHashInit(&hash);
 
 	for (i = 0, d = numsSize-1; d >= 0; i += sgn*d--, sgn *= -1) { // speedhack for leetcode :)
 		c = hash.find(&hash, nums[i]);
