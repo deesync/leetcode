@@ -100,6 +100,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 		r[0] = c < i ? c : i;
 		r[1] = c < i ? i : c;
 
+		hash.free(&hash);
 		return r;
 	}
 
