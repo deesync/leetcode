@@ -1,2 +1,2 @@
 # leetcode
-My solutions for taskies form leetcode.com
+My solutions for taskies from leetcode.com
