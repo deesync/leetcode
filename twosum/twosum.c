@@ -67,7 +67,8 @@ void __ih_free(IHash *hash)
 	}
 }
 
-IHash *intHashInit(IHash *hash) {
+IHash *intHashInit(IHash *hash) 
+{
 	hash->head = NULL;
 	hash->add = __ih_add_head;
 	hash->find = __ih_find;
@@ -111,8 +112,7 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
 
 
 
-int 
-main(void)
+int main(void)
 {
 	int test_arr[] = {1, 2, 4, 6, 9, 1, 9, 8, -2, -3, -20, 34, 0, 12, 5, 8};
 	int len = sizeof(test_arr)/sizeof(test_arr[0]);
