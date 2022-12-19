@@ -78,7 +78,6 @@ IHash *intHashInit(IHash *hash)
 }
 
 
-
 int *twoSum(int *nums, int numsSize, int target, int *returnSize)
 {
 	int *r = NULL; // return
@@ -97,8 +96,10 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
 		*returnSize = 2;
 		r = (int *) malloc((*returnSize) * sizeof(int));
 
-		r[0] = c < i ? c : i;
-		r[1] = c < i ? i : c;
+		// r[0] = c < i ? c : i;
+		// r[1] = c < i ? i : c;
+		r[0] = c;
+		r[1] = i;
 
 		hash.free(&hash);
 		return r;
@@ -110,7 +111,7 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
 }
 
 
-
+// -----------------------------------------------------------------------------
 
 int main(void)
 {
