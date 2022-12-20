@@ -3,7 +3,7 @@
 The most popular task called twosum.
 Here is the [description](https://leetcode.com/problems/two-sum/description/)
 
-Solution written in C with own hash implementation
+Solution written in C with own hash implementation to obtain O(nlogn) time complexity
 
 
 The average runtime is about 8-12 ms which is pretty fast according to leetcode statistics
