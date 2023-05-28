@@ -1,0 +1,9 @@
+.vscode
+.gitignore
+
+*.out
+*test*
+
+/lvp
+/longestcommonprefix
+twosum/twosum
